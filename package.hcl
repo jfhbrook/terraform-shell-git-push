@@ -1,5 +1,6 @@
 package {
   version = "1.0.0"
+  description = "Push to a git repository"
 
   scripts {
     format = [
