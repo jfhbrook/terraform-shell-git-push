@@ -3,7 +3,7 @@
 set -euo pipefail
 
 RESPONSE="$(echo '{"sha":null}' | jq -cM \
-  --arg path "${path}" \
+  --arg path "$(pwd)" \
   --arg remote "${remote}" \
   --arg branch "${branch}" \
   '.path = $path | .remote = $remote | .branch = $branch')"

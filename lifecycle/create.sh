@@ -7,4 +7,4 @@ if [[ "${force}" == 'true' ]]; then
   FORCE_FLAG='--force'
 fi
 
-git push ${force} "${remote}" "${branch}"
+git push ${FORCE_FLAG} "${remote}" "${branch}"
