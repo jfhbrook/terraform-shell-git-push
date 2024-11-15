@@ -9,6 +9,7 @@ resource "shell_script" "git_push" {
   environment = {
     remote = var.remote
     branch = var.branch
+    force  = var.force
   }
 
   interpreter       = ["/usr/bin/env", "bash", "-c"]

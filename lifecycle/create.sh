@@ -2,4 +2,9 @@
 
 set -euo pipefail
 
-git push "${remote}" "${branch}"
+FORCE_FLAG=''
+if [[ "${force}" == 'true' ]]; then
+  FORCE_FLAG='--force'
+fi
+
+git push ${force} "${remote}" "${branch}"

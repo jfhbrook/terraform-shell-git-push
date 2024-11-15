@@ -17,3 +17,8 @@ output "sha" {
   description = "The SHA for the commit that was pushed"
   value       = shell_script.git_push.output.sha
 }
+
+output "force" {
+  description = "Whether or not the push was forced"
+  value       = var.force
+}

@@ -14,3 +14,9 @@ variable "branch" {
   type        = string
   default     = null
 }
+
+variable "force" {
+  description = "Whether or not to force push"
+  type        = bool
+  default     = false
+}
