@@ -1,5 +1,7 @@
 module {
-  version = "1.0.0"
+  name        = "git-push"
+  provider    = "shell"
+  version     = "1.0.0"
   description = "Push to a git repository"
 
   scripts {
