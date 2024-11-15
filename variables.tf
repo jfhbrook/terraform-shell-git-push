@@ -14,9 +14,3 @@ variable "branch" {
   type        = string
   default     = null
 }
-
-variable "force" {
-  description = "Force push"
-  type = bool
-  default = false
-}

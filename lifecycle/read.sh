@@ -6,8 +6,7 @@ RESPONSE="$(echo '{"sha":null}' | jq -cM \
   --arg path "${path}" \
   --arg remote "${remote}" \
   --arg branch "${branch}" \
-  --arg force "${force}" \
-  '.path = $path | .remote = $remote | .branch = $branch | .force = $force')"
+  '.path = $path | .remote = $remote | .branch = $branch')"
 
 git fetch "${remote}" 1>/dev/null
 

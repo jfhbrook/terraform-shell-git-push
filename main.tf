@@ -1,5 +1,3 @@
-data "random_string" "force_id" {}
-
 resource "shell_script" "git_push" {
   lifecycle_commands {
     create = file("${path.module}/lifecycle/create.sh")
@@ -11,13 +9,8 @@ resource "shell_script" "git_push" {
   environment = {
     remote = var.remote
     branch = var.branch
-    force  = var.force
   }
 
   interpreter       = ["/usr/bin/env", "bash", "-c"]
   working_directory = var.path
-
-  triggers = {
-    when_value_changed = var.force ? "random_string.force_id : ""
-  }
 }
